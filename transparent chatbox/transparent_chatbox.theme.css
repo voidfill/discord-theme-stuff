@@ -1,0 +1,83 @@
+/**
+ * @name transparent chatbox
+ * @author void#1000
+ * @version v1.0.1
+ * @description owo | now with added dividers
+*/
+
+
+:root {
+    --bg-chatbox:  #20222581;
+    --bg-divider: var(--background-modifier-accent); /* discords default color */
+}
+
+.scroller-2LSbBU {
+	bottom: -39em;
+}
+
+.scrollerSpacer-avRLaA {
+	height: 41em;
+}
+
+.scrollerSpacer-avRLaA.empty-6MGttt {
+    height: 40em;
+}
+
+.scroller-2LSbBU::-webkit-scrollbar-track {
+    margin-bottom: calc(39em + 0.5em);
+}
+
+.form-2fGMdU::before {
+    display: none;
+}
+
+.channelTextArea-rNsIhG {
+    background-color: transparent;
+}
+
+.jumpToPresentBar-G1R9s6 {
+    bottom: 8px;
+    background-color:transparent;
+    opacity: 1;
+}
+
+.jumpToPresentBar-G1R9s6 .barButtonMain-3K-jeJ, .jumpToPresentBar-G1R9s6 .barButtonAlt-mYL1lj {
+    height: 37px;
+    bottom: -7px;
+}
+
+.container-2fRDfG, .scrollableContainer-2NUZem {
+	background-color: var(--bg-chatbox);
+}
+
+.jumpToPresentBar-G1R9s6::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50em;
+    height: 50em;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 -38px 0 0 var(--bg-chatbox);
+}
+
+.container-2fRDfG::after /* reply divider */ {
+    content: "";
+    width: calc(100% - 10px); 
+    background: var(--bg-divider);
+    margin-left: 4px;
+    position: absolute;
+    height: 1px;
+    top: 33px;
+}
+
+.jumpToPresentBar-G1R9s6::after /* jumpto divider */ {
+    content: "";
+    width: calc(100% - 10px); 
+    background: var(--bg-divider);
+    margin-left: 4px;
+    position: absolute;
+    height: 1px;
+    top: 44px; 
+}
