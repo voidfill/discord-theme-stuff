@@ -1,13 +1,13 @@
 /**
  * @name transparent chatbox
  * @author void#1000
- * @version v1.0.1
- * @description owo | now with added dividers
+ * @version v1.0.2
+ * @description uwu | now with error messages
 */
 
 
 :root {
-    --bg-chatbox:  #20222581;
+    --bg-chatbox: #20222581;
     --bg-divider: var(--background-modifier-accent); /* discords default color */
 }
 
@@ -35,13 +35,13 @@
     background-color: transparent;
 }
 
-.jumpToPresentBar-G1R9s6 {
+.jumpToPresentBar-G1R9s6, .messagesErrorBar-nyJGU7 {
     bottom: 8px;
     background-color:transparent;
     opacity: 1;
 }
 
-.jumpToPresentBar-G1R9s6 .barButtonMain-3K-jeJ, .jumpToPresentBar-G1R9s6 .barButtonAlt-mYL1lj {
+.jumpToPresentBar-G1R9s6 .barButtonBase-2uLO1z, .messagesErrorBar-nyJGU7 .barButtonBase-2uLO1z {
     height: 37px;
     bottom: -7px;
 }
@@ -50,7 +50,7 @@
 	background-color: var(--bg-chatbox);
 }
 
-.jumpToPresentBar-G1R9s6::before {
+.jumpToPresentBar-G1R9s6::before, .messagesErrorBar-nyJGU7::before {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -62,22 +62,20 @@
     box-shadow: 0 -38px 0 0 var(--bg-chatbox);
 }
 
-.container-2fRDfG::after /* reply divider */ {
-    content: "";
-    width: calc(100% - 10px); 
-    background: var(--bg-divider);
-    margin-left: 4px;
-    position: absolute;
-    height: 1px;
-    top: 33px;
-}
+/* remove below if you dislike the dividers */
 
-.jumpToPresentBar-G1R9s6::after /* jumpto divider */ {
+.container-2fRDfG::after /* reply divider */,
+.jumpToPresentBar-G1R9s6::after /* jumpto divider */,
+.messagesErrorBar-nyJGU7::after /*error divider */ {
     content: "";
     width: calc(100% - 10px); 
     background: var(--bg-divider);
-    margin-left: 4px;
+    margin-left: 5px;
     position: absolute;
     height: 1px;
     top: 44px; 
+}
+
+.container-2fRDfG::after {
+    top: 33px;
 }

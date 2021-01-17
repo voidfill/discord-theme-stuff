@@ -1,7 +1,7 @@
 {
     "name": "transparent chatbox",
-    "description": "owo | now with added dividers",
-    "version": "v1.0.1",
+    "description": "uwu | now with error messages",
+    "version": "v1.0.2",
     "author": "void#1000",
     "theme": "transparent_chatbox.theme.css",
     "license": "MIT"
